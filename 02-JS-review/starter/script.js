@@ -183,3 +183,7 @@ summary;
 // ternaries instead of if/else statements
 const pagesRange = pages > 1000 ? "over a thousand" : "less than 1000";
 pagesRange;
+
+// arrow functions
+const getYear = (str) => str.split("-")[0];
+console.log(getYear(publicationDate));
