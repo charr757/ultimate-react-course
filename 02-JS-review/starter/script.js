@@ -177,5 +177,9 @@ updatedBook;
 // template literal
 const summary = `${title}, a ${pages}-page long book, was written by ${author} in ${
   publicationDate.split("-")[0]
-}`;
+}. The book has ${hasMovieAdaptation ? "" : "not"} been adapted as a movie.`;
 summary;
+
+// ternaries instead of if/else statements
+const pagesRange = pages > 1000 ? "over a thousand" : "less than 1000";
+pagesRange;
