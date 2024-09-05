@@ -145,7 +145,7 @@ function getBook(id) {
 
 // Destructuring
 
-const book = getBook(1);
+const book = getBook(2);
 book;
 // const title = book.title;
 // const author = book.author;
@@ -203,3 +203,15 @@ console.log(false || "Some string");
 console.log(book.translations.spanish);
 const spanishTranslation = book.translations.spanish || "NOT TRANSLATED";
 spanishTranslation;
+
+const count = book.reviews.librarything.reviewsCount ?? "no data";
+count;
+
+// optional chaining
+function getTotalReviewCount(book) {
+  const goodreads = book.reviews?.goodreads.reviewsCount;
+  const librarything = book.reviews?.librarything?.reviewsCount ?? 0;
+  return goodreads + librarything;
+}
+
+console.log(getTotalReviewCount(book));
